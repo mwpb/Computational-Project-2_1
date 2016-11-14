@@ -1,0 +1,1108 @@
+#LyX 1.6.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\date{ }
+\setlength{\parskip}{5pt}
+\setlength{\parsep}{5pt}
+\setlength{\headsep}{5pt}
+\setlength{\topskip}{5pt}
+\setlength{\topmargin}{5pt}
+\setlength{\topsep}{5pt}
+\setlength{\partopsep}{5pt}
+
+\linespread{0.5}
+
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{20pt}{*5}{*5}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\usepackage[left=2cm,top=1cm,right=2cm,nohead,foot=1cm]{geometry}
+
+\usepackage{lmodern}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\language english
+\inputencoding auto
+\font_roman palatino
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+2 Prime Numbers and Factorisation
+\end_layout
+
+\begin_layout Paragraph*
+Question 1:
+\end_layout
+
+\begin_layout Standard
+The source file is in Appendix B (file 3).
+ A simple modification to speed up this test whether n is a multiple of
+ any natural number less than or equal to 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+ (rather than n).
+ Indeed, suppose that n has no factors less than or equal to 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+ but there exists one proper factor, say 
+\begin_inset Formula $\beta$
+\end_inset
+
+, greater than 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $1\neq\frac{n}{\beta}<\sqrt{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{n}{\beta}\mid n$
+\end_inset
+
+ 
+\begin_inset Formula $\perp$
+\end_inset
+
+(Contradiction).
+ Thus the number of trial divisions is reduced.
+ The output of my program when the prime 17 is entered is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Framed
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Enter n:17
+\end_layout
+
+\begin_layout Plain Layout
+m=8, r=8.500000
+\end_layout
+
+\begin_layout Plain Layout
+m=5, r=5.666667
+\end_layout
+
+\begin_layout Plain Layout
+m=4, r=4.250000
+\end_layout
+
+\begin_layout Plain Layout
+Is Prime.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The output when the composite number 25 is entered is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Framed
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Enter n:25 
+\end_layout
+
+\begin_layout Plain Layout
+m=12, r=12.500000 
+\end_layout
+
+\begin_layout Plain Layout
+m=8, r=8.333333 
+\end_layout
+
+\begin_layout Plain Layout
+m=6, r=6.250000 
+\end_layout
+
+\begin_layout Plain Layout
+m=5, r=5.000000 
+\end_layout
+
+\begin_layout Plain Layout
+Not prime.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Question 2:
+\end_layout
+
+\begin_layout Standard
+The source and header files are in Appendix B (files 4 and 13).
+ The text file that is created by P2_1question2.c is in Appendix A (printout
+ 1).
+ My results are an example of the Prime Number Theorem since the quantity
+ 
+\begin_inset Formula $\frac{\pi\left(n\right)}{\left(\frac{n}{log\left(n\right)}\right)}$
+\end_inset
+
+ approaches 1 as n increases.
+\end_layout
+
+\begin_layout Paragraph*
+Question 3:
+\end_layout
+
+\begin_layout Standard
+The source file is in Appendix B (file 5).
+ The output when the number 378 is entered is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Framed
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Enter n:378
+\end_layout
+
+\begin_layout Plain Layout
+Prime factors: 2 3 3 3 7
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $n=p_{1}p_{2}...p_{k}$
+\end_inset
+
+, where 
+\begin_inset Formula $p_{i}\leq p_{i+1}$
+\end_inset
+
+.
+ My algorithm makes at most 
+\begin_inset Formula $\sqrt{n}-1+k$
+\end_inset
+
+ trial divisions since it divides by every natural number less than 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+ (except for 1) and does another division for every factor that it finds
+ (it only moves onto the next factor when all smaller factors have been
+ removed).
+ Each trial division has a constant (independent of n) number of arithmetic
+ operations.
+ In addition, it is possible to create an upper bound for k in terms of
+ n:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=p_{1}p_{2}...p_{k}\Rightarrow2^{k}\leq n\Rightarrow klog\left(2\right)\leq log\left(n\right)\Rightarrow k\leq\frac{log\left(n\right)}{log\left(2\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This means that the complexity of my algorithm is 
+\begin_inset Formula $\mathcal{O}\left(\sqrt{n}+log\left(n\right)\right)=\mathcal{O}\left(\sqrt{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+3 Linear Congruences
+\end_layout
+
+\begin_layout Paragraph*
+Question 4:
+\end_layout
+
+\begin_layout Standard
+The source file is in Appendix B (file 6).
+ The full printouts of P2_1question4.c are in Appendix A (printouts 2, 3,
+ 4 and 5).
+ Table 1 shows the pairs of numbers and the corresponding highest common
+ factors and linear combinations.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HCF = Linear Combination of a and b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 028 532 369
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 926 605 803
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5503 = 2028532369*(104433) + 1926605803*(-109958)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 853 573 797
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 816 883 927
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7823 = 1853573797*(92652) + 1816883927*(-94523)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 992 502 829
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 750 170 271
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7621 = 1992502829*(62638) + 1750170271*(-71311)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 672 295 039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+821 350 697
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3821 = 1672295039*(21010) + 821350697*(-42777)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Table 1
+\end_layout
+
+\begin_layout Paragraph*
+Question 5:
+\end_layout
+
+\begin_layout Lemma*
+\begin_inset Formula $ax\equiv ay\left(mod\left(m\right)\right)\Rightarrow x\equiv y\left(mod\left(\frac{m}{\left(a,m\right)}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ax\equiv ay\left(mod\left(m\right)\right)\Rightarrow ax-ay=km\Rightarrow\frac{a}{\left(a,m\right)}\left(x-y\right)=\frac{m}{\left(a,m\right)}k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now, 
+\begin_inset Formula $\left(\frac{a}{\left(a.m\right)},\frac{m}{\left(a,m\right)}\right)=1$
+\end_inset
+
+, so 
+\begin_inset Formula $\frac{m}{\left(a,m\right)}\mid\left(x-y\right)$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $x\equiv y\left(mod\left(\frac{m}{\left(a,m\right)}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Method:
+\end_layout
+
+\begin_layout Standard
+First, use the Euclidean algorithm to find 
+\begin_inset Formula $\left(a,m\right):=HCF\left(a,m\right)$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\left(a,m\right)\nmid b\Rightarrow\left(a,m\right)\mid ax+mz=b\bot$
+\end_inset
+
+.
+ So there is no solution unless 
+\begin_inset Formula $\left(a,m\right)\mid b$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+By the above Lemma, 
+\begin_inset Formula $ax\equiv b\left(mod\left(m\right)\right)\Rightarrow\frac{a}{\left(a,m\right)}x\equiv\frac{b}{\left(a,m\right)}\left(mod\left(\frac{m}{\left(a,m\right)}\right)\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+However 
+\begin_inset Formula $\left(\frac{a}{\left(a.m\right)},\frac{m}{\left(a,m\right)}\right)=1$
+\end_inset
+
+, so by the Euclidean algorithm we can find 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha\frac{a}{\left(a,m\right)}+\beta\frac{m}{\left(a,m\right)}=1\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\exists\alpha\right)\alpha\frac{a}{\left(a,m\right)}\equiv1\left(mod\left(\frac{m}{\left(a,m\right)}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+That is, 
+\begin_inset Formula $x\equiv\alpha\frac{b}{\left(a,m\right)}\left(mod\left(\frac{m}{\left(a,m\right)}\right)\right)\Rightarrow x\equiv\alpha\frac{b}{\left(a,m\right)}+c\frac{m}{\left(a,m\right)}\left(mod\left(m\right)\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $c=0,1...\left(\left(a,m\right)-1\right).$
+\end_inset
+
+ Thus there are 
+\begin_inset Formula $\left(a,m\right)$
+\end_inset
+
+ solutions.
+\end_layout
+
+\begin_layout Paragraph*
+Question 6:
+\end_layout
+
+\begin_layout Standard
+The source file and header file are in Appendix B (files 7 and 12).
+ The full printouts of P2_1question6.c are in Appendix A (printouts 6, 7
+ and 8).
+ Table 2 shows the congruences and their solutions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Congruence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $38449x\equiv10910\left(mod\left(32063\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x=72$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $23151x≡7617(mod\left(7717\right))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No solutions.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $34387x≡6777(mod\left(19829\right))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x=10+79c\left(c=0,1...250\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Table 2
+\end_layout
+
+\begin_layout Standard
+There are no solutions in the second example since 
+\begin_inset Formula $23151\equiv0\left(mod\left(7717\right)\right)$
+\end_inset
+
+ but 7617 is not.
+\end_layout
+
+\begin_layout Section*
+4 Finding Inverses and Breaking RSA
+\end_layout
+
+\begin_layout Paragraph*
+Question 7:
+\end_layout
+
+\begin_layout Standard
+Calculating d involves using the Euclidean algorithm on 
+\begin_inset Formula $\phi\left(n\right)$
+\end_inset
+
+ and e (which is w.l.o.g.
+\begin_inset Formula $<\phi\left(n\right)$
+\end_inset
+
+).
+ For all numbers involved to be 
+\begin_inset Formula $<2^{13}$
+\end_inset
+
+, it is sufficient that 
+\begin_inset Formula $\phi\left(n\right)<2^{13}\Rightarrow\left(p-1\right)\left(q-1\right)<2^{13}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $max\{p,q\}<2^{\frac{13}{2}}+1$
+\end_inset
+
+ is a condition that would guarantee that 
+\begin_inset Formula $\phi\left(n\right)<2^{13}$
+\end_inset
+
+.
+ (C.F.
+ question 10)
+\end_layout
+
+\begin_layout Paragraph*
+Question 8:
+\end_layout
+
+\begin_layout Standard
+To find d from n, my algorithm first factorizes 
+\begin_inset Formula $n=pq$
+\end_inset
+
+.
+ Then it uses the Euclidean algorithm on 
+\begin_inset Formula $\phi\left(n\right)$
+\end_inset
+
+ and e, to find d.
+ 
+\end_layout
+
+\begin_layout Lemma*
+Let the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ equation in the Eulcidean algorithm be 
+\begin_inset Formula $r_{i}=q_{i}r_{i+1}+r_{i+2}$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow r_{i+2}\equiv r_{i}\left(mod\left(r_{i+1}\right)\right)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $r_{i+2}<\frac{1}{2}r_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $r_{i+1}<\frac{1}{2}r_{i}$
+\end_inset
+
+, then the result follows from the fact that the 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ are strictly decreasing.
+ If 
+\begin_inset Formula $\frac{1}{2}r_{i}\leq r_{i+1}$
+\end_inset
+
+, then 
+\begin_inset Formula $r_{i+2}\equiv r_{i}\left(mod\left(r_{i+1}\right)\right)\Rightarrow r_{i+2}=r_{i}-r_{i+1}<\frac{1}{2}r_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let k be such that 
+\begin_inset Formula $2^{k}<\phi\left(n\right)<2^{k+1}\Rightarrow k<\frac{log\left(\phi\left(n\right)\right)}{2}<k+1$
+\end_inset
+
+.
+ Then the Euclidean algorithm takes at most 
+\begin_inset Formula $2\left(k+1\right)<2\left(\frac{log\left(\phi\left(n\right)\right)}{2}+1\right)$
+\end_inset
+
+ steps.
+ My algorithm performs four(DOES IT DO MORE!?) arithmetic operations at
+ every step: finding the the quotient, the remainder and two quantities
+ which produce the 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha\phi\left(n\right)+\beta e=1$
+\end_inset
+
+.
+ Thus the arithmetical operations has an upper bound that is 
+\begin_inset Formula $8\left(\frac{log\left(\phi\left(n\right)\right)}{2}+1\right)$
+\end_inset
+
+.
+ So the contribution of the Euclidean algorithm when calculating the number
+ of arithmetic operations needed to find d is negligable.
+ The number of arithmetic operations in the factorization stage is less
+ than 
+\begin_inset Formula $2\sqrt{n}$
+\end_inset
+
+, since my factorization algorithm performs two arithmetical operations
+ at every trial divison (IS THIS TRUE!?).
+ For example, given that none of the numbers can exeed 
+\begin_inset Formula $2^{31}$
+\end_inset
+
+ in my implementation, a rough order of magnitude (THIS IS CERTAINLY A WORST
+ CASE...)would be 
+\begin_inset Formula $\left(2\sqrt{2^{31}}\approx92681\approx\right)10^{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Question 9:
+\end_layout
+
+\begin_layout Standard
+The source and header files are in Appendix B (files 8, 11, 12, 14 and 15).
+ The full printouts are in Appendix A (printouts 9, 10, 11, 12, 13 and 14).
+ Table 3 shows the encryption key and the value of d in the computed decryption
+ key (n,d):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Encryption Key: (n,e)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1 805 760 301, 50 512 913)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1175911973
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1 659 317 047, 23 816 383)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+361727455
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1 764 053 131, 99 833)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+518520281
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(145 153 111, 14 655 761)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76350225
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1 955 520 821, 5 537 969)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1782936689
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1 723 466 867, 166 907 407)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1047592543
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Table 3
+\end_layout
+
+\begin_layout Paragraph*
+Question 10:
+\end_layout
+
+\begin_layout Standard
+The source and header files are in Appendix B (files 9 and 12).
+ Working modulo n, n-1 is the largest number involved.
+ However, my algorithm raises c to the 
+\begin_inset Formula $d^{th}$
+\end_inset
+
+ power by repeated multiplication.
+ Thus the largest number actually involved is 
+\begin_inset Formula $\left(n-1\right)^{2}$
+\end_inset
+
+, which by previous discussion must be below 
+\begin_inset Formula $2^{13}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Question 11:
+\end_layout
+
+\begin_layout Standard
+The source and header files are in Appendix B (files 1, 10, 11, 12, 14,
+ 15, 16, 17, 18).
+ The output of P2_1final.c (when the file P2_1message(encoded) - file 2 in
+ Appendix B - is the encrypted message) is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Framed
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+alone and warming his five wits the white owl in the belfry sits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Niven et al.
+ 1 Divisibility.
+ In: 
+\emph on
+An Introduction To The Theory Of Numbers (5th Edition) 
+\emph default
+Wiley Text Books, 1991.
+\end_layout
+
+\end_body
+\end_document
